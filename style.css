@@ -1,0 +1,25 @@
+body {
+
+	background-color:wheat;
+
+}
+
+
+
+
+h1 {
+
+font-family: cursive;
+font-size: 70px;
+color: rgb(139,0,0);
+
+}
+
+table, th, td {
+
+	border: 2px solid black;
+}
+
+#main {
+	background-color: yellow;
+}
