@@ -2,19 +2,23 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-       
+
         <title>
             elividal.com
         </title>
         <body>
-           <nav>
+ <nav>
   <div class="menu">
-    <button onclick="location.href='#'">Home</button>
-    <button onclick="location.href='convert.html'">Unit Converter test project</button>
-    <button onclick="location.href='form.html'">Simple form test</button>
-    <button onclick="location.href='solar.html'">Solar System CSS Project</button>
+    <button onclick="showSmileyAndNavigate('#')">Home</button>
+    <button onclick="showSmileyAndNavigate('convert.html')">Unit Converter test project</button>
+    <button onclick="showSmileyAndNavigate('form.html')">Simple form test</button>
+    <button onclick="showSmileyAndNavigate('solar.html')">Solar System CSS Project</button>
   </div>
 </nav>
+
+<div id="smileyContainer"></div>
+
+
 
             
             <header>
@@ -103,6 +107,7 @@
             </tr>
           
         </table>
+            <script src="script.js"></script>
         </body>
     </head>
 </html>
