@@ -1,5 +1,6 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: mistyrose;
 }
 
 .button-div {
@@ -206,9 +207,10 @@ h2 {
 }
 
 .recommendation {
+  font-family: fantasy;
   font-style: italic;
   text-align: left;
-  width: 21.875rem;
+  width: 27.875rem;
   padding: 1rem;
   background-color: #fff;
   border-radius: 11px;
@@ -217,7 +219,7 @@ h2 {
   margin: 10px;
   border:1px solid gray;
   font-size: 18px;
-  height:150px
+  height:230px
 }
 
 .recommendation span {
