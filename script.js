@@ -8,6 +8,7 @@ function showSmileyAndNavigate(url) {
   }, 1000); // 1000 milliseconds = 1 second
 }
 
+
 function changeBackground() {
   document.body.style.backgroundColor = "lightblue"; // Or any color you like
 }
