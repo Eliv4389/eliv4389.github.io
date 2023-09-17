@@ -6,6 +6,8 @@
         <title>
             elividal.com
         </title>
+         <meta charset="UTF-8">
+         </head>
         <body>
  <nav>
   <div class="menu">
@@ -22,10 +24,10 @@
 
             
             <header>
-                <h1>Hi 👋, I'm Eli </h1>
+                <h1 id="title"></h1>
                 <br>
                 <img src="vax.jpeg" alt="Eli AI" width="300" height="300">
-    
+    <button onclick="toggleDescription()">Show More/Less</button>
                 <h2>Operations and Strategy Specialist</h2>
                 <p>I'm Eli Vidal, a proud TAU graduate and operations/strategy specialist. <br>
                      At present, I work as an EDI Enrollment Specialist for Athelas, where I debug failed healthcare payments for our providers. <br>
@@ -34,6 +36,9 @@
                     </p>
                    <p> you can view my linkedin profile <a href="https://www.linkedin.com/in/eli-vidal/" target="_blank"> here</a></p>
                    <audio controls> 
+                    <button onclick="playAudio()">Play Audio</button>
+<button onclick="pauseAudio()">Pause Audio</button>
+
                     <source src="intro.mp3" type="audio/mpeg">
                     Your browser does not support the audio formats provided.
                   </audio>
@@ -107,7 +112,10 @@
             </tr>
           
         </table>
+<button id="startCountdown">Start Countdown</button>
+        <div id="countdown"></div>
+
             <script src="script.js"></script>
         </body>
-    </head>
+   
 </html>
