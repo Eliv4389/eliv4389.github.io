@@ -47,6 +47,7 @@ nav ul li {
 /* About Us section styles */
 #about {
   background-color: rgba(255,255,255,0.6);
+  font-family: fantasy;
   padding: 20px;
   border-radius: 10px;
   color: #333;
