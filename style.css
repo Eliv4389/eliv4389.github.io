@@ -211,11 +211,11 @@ body, h2, p {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .project-card {
-    flex-basis: calc(33.33% - 20px); /* Width of each card with a slight deduction for gap */
+    flex-basis: calc(33.33% - 20px);
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -234,6 +234,8 @@ body, h2, p {
     font-size: 24px;
     margin-bottom: 15px;
     color: #333;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .project-card p {
@@ -253,6 +255,27 @@ body, h2, p {
 .project-card a:hover {
     color: #005bb5;
 }
+
+/* Small logo next to project title */
+.project-card img.project-logo {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* Styling for the project image */
+.project-card img.project-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
 
 /* Recommendations Styles */
 #recommendations {
