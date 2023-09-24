@@ -82,6 +82,13 @@ body, h2, p {
     background-color: #555;
 }
 
+#about-me.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 #about-me {
     margin-top: 300px;
     display: flex;
@@ -90,10 +97,18 @@ body, h2, p {
     padding: 40px 5%;
     background-color: #ffeb3b; 
     border-radius: 10px;
+
+    .about-me-text {
+    flex: 1;
+    margin: 0 2em;  /* Adjust this value for spacing between images and text */
 }
 
-#about-me .profile_image {
-    max-width: 250px;
+}
+
+#about-me .profile_image
+ {
+    width:45%;
+    max-width: 300px;
     height: auto;
     border-radius: 50%;
     margin-right: 30px;
