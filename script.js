@@ -10,6 +10,11 @@ function showSmileyAndNavigate(url) {
     }, 3000);
 }
 
+document.getElementById('backToTopButton').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior (in case it's causing issues)
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smoothly scroll to the top
+});
+
 function addRecommendation() {
     const textarea = document.getElementById('new_recommendation');
     const recommendationsContainer = document.getElementById('all_recommendations');

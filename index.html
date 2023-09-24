@@ -10,6 +10,7 @@
 <body>
 
 <!-- Navigation Bar -->
+<div id="home">
 <nav id="home">
     <div class="profile">
         <h1 class="profile_name">Eli Vidal</h1>
@@ -28,17 +29,22 @@
         <a class="menu_item" href="#projects">Projects</a>
         <a class="menu_item" href="#recommendations">Recommendations</a>
     </div>
+    <br>
     <div class="button-div">
-        <button onclick="showSmileyAndNavigate('#')">Home</button>
-        <button onclick="showSmileyAndNavigate('https://eliv4389.github.io/ejtos-react_budget_app/')">Go to my React App</button>
-        <button onclick="showSmileyAndNavigate('tattoo/index.html')">Muitos Gatinhos Tatoo</button>
-        <button onclick="showSmileyAndNavigate('convert.html')">Unit Converter test project</button>
-        <button onclick="showSmileyAndNavigate('form.html')">Simple form test</button>
-        <button onclick="showSmileyAndNavigate('solar.html')">Solar System CSS Project</button>
-        <button onclick="showSmileyAndNavigate('interest.html')">Interest Calculator</button>
+        <div class="button-div">
+    <a href="#"><button>Home</button></a>
+    <a href="https://eliv4389.github.io/ejtos-react_budget_app/"><button>Go to my React App</button></a>
+    <a href="tattoo/index.html"><button>Muitos Gatinhos Tatoo</button></a>
+    <a href="convert.html"><button>Unit Converter test project</button></a>
+    <a href="form.html"><button>Simple form test</button></a>
+    <a href="solar.html"><button>Solar System CSS Project</button></a>
+    <a href="interest.html"><button>Interest Calculator</button></a>
+</div>
+
     </div>
-    <div id="smileyContainer"></div>
+    
 </nav>
+</div>
 
 <!-- About Me -->
 <section id="about-me" class="container">
@@ -168,7 +174,7 @@ Ready to connect with someone who's turning the game around? Let's <a href="http
 </section>
 
 <div class="iconbutton">
-    <a href="#home">
+<a href="#home" id="backToTopButton">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
