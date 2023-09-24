@@ -1,82 +1,73 @@
 <!DOCTYPE html>
-<html>
-  <head>
-     <meta charset="UTF-8">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
     <title>Eli Vidal - Portfolio</title>
-    <link rel="stylesheet" href="./style.css"/>
-      
-  </head>
-  <body>
-   <!-- Navigation Bar -->
-<nav>
-  <div id="home">
-    <div class="profile_name">
-      Eli Vidal
-      <div class="contact_info">
-        <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-        vidaleli1989@icloud.com
-      </div>
-      <div style="clear:both;"></div>
-      <div class="contact_info">
-        <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-        +13156441930
-      </div>
-    </div>
-    <div class="topdiv">
-      <a class="topmenu" href="#about-me">About Me</a>
-      <a class="topmenu" href="#Skills">Skills</a>
-      <a class="topmenu" href="#Projects">Projects</a>
-      <a class="topmenu" href="#Recommendations">Recommendations</a>
-    </div>
-  </div>
-  <div class="button-div">
+    <link rel="stylesheet" href="./style.css" />
+</head>
 
+<body>
 
-    <button onclick="showSmileyAndNavigate('#')">Home</button>
-    <button onclick="showSmileyAndNavigate('https://eliv4389.github.io/ejtos-react_budget_app/')">Go to my React App</button>
-    <button onclick="showSmileyAndNavigate('tattoo/index.html')">Muitos Gatinhos Tatoo</button>
-    <button onclick="showSmileyAndNavigate('convert.html')">Unit Converter test project</button>
-    <button onclick="showSmileyAndNavigate('form.html')">Simple form test</button>
-    <button onclick="showSmileyAndNavigate('solar.html')">Solar System CSS Project</button>
-    <button onclick="showSmileyAndNavigate('interest.html')">Interest Calculator</button>
-  </div>
-  <div id="smileyContainer"></div>
+<!-- Navigation Bar -->
+<nav id="home">
+    <div class="profile">
+        <h1 class="profile_name">Eli Vidal</h1>
+        <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="Envelope Icon" />
+            <span>vidaleli1989@icloud.com</span>
+        </div>
+        <div class="contact_info">
+            <img src="html_finalprojimages/phone.png" alt="Phone Icon" />
+            <span>+13156441930</span>
+        </div>
+    </div>
+    <div class="menu">
+        <a class="menu_item" href="#about-me">About Me</a>
+        <a class="menu_item" href="#skills">Skills</a>
+        <a class="menu_item" href="#projects">Projects</a>
+        <a class="menu_item" href="#recommendations">Recommendations</a>
+    </div>
+    <div class="button-div">
+        <button onclick="showSmileyAndNavigate('#')">Home</button>
+        <button onclick="showSmileyAndNavigate('https://eliv4389.github.io/ejtos-react_budget_app/')">Go to my React App</button>
+        <button onclick="showSmileyAndNavigate('tattoo/index.html')">Muitos Gatinhos Tatoo</button>
+        <button onclick="showSmileyAndNavigate('convert.html')">Unit Converter test project</button>
+        <button onclick="showSmileyAndNavigate('form.html')">Simple form test</button>
+        <button onclick="showSmileyAndNavigate('solar.html')">Solar System CSS Project</button>
+        <button onclick="showSmileyAndNavigate('interest.html')">Interest Calculator</button>
+    </div>
+    <div id="smileyContainer"></div>
 </nav>
 
+<!-- About Me -->
+<section id="about-me" class="container">
+    <img src="vax.jpeg" class="profile_image" alt="Eli Vidal" />
+    <div>
+        <h2>Hello, I'm Eli Vidal!</h2>
+        <p>
+            A distinguished TAU graduate with a strong background in operations and strategy. Currently working as an EDI Enrollment Specialist for Athelas, I streamline failed healthcare payments. With a Bachelors in Social Work and an MBA, I constantly look for avenues to upscale my knowledge. Outside of work, I am an avid traveler and an enthusiastic reader.
+            <a href="https://www.linkedin.com/in/eli-vidal/" target="_blank">Connect with me on LinkedIn</a>
+        </p>
+    </div>
+</section>
 
-
-    <!-- About Me -->
-    <section id="about-me" class="container">
-      <div>
-        <img src="vax.jpeg" class="profile_image" width="100" height="100 " />
-      </div>
-
-      <div>
-          <h1>
-            Hi, I'm Eli Vidal! <img src="https://twemoji.maxcdn.com/2/72x72/1f44b.png" width="60px"/>
-          </h1>
-          <p>
-            I'm Eli Vidal, a proud TAU graduate and operations/strategy specialist.
-At present, I work as an EDI Enrollment Specialist for Athelas, where I debug failed healthcare payments for our providers.
-I hold a Bachelor's degree in Social Work and an MBA in Business Administration.
-When I'm not at work, you'll likely find me traveling the world (37 countries and counting) or deep into a good book.
-
-you can view my linkedin profile <a href="https://www.linkedin.com/in/eli-vidal/" target="_blank"> here</a>
-          </p>
-      </div>
-    </section>
-              
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div style="clear:both;"></div>
-
-      <div class="all_skills">
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="all_skills">
+        <!-- HTML Skill -->
         <div class="skill">
-          <img src="html_finalprojimages/html5.png"/>
-          <h6>HTML</h6>
-          <p>1 year experience</p>
-        </div>  
+            <img src="html_finalprojimages/html5.png"/>
+            <h6>HTML</h6>
+            <p>1 year experience</p>
+        </div>
+        <!-- JS Skill -->
+        <div class="skill">
+            <img src="html_finalprojimages/js.jpeg"/>
+            <h6>JavaScript</h6>
+            <p>1 year experience</p>
+        </div>
 
         <div class="skill">
           <img src="html_finalprojimages/js.jpeg"/>
@@ -109,46 +100,35 @@ you can view my linkedin profile <a href="https://www.linkedin.com/in/eli-vidal/
     </section>
           
     <!-- Projects -->
-    <section class="projects" id="projects">
-      <h2>
-        Projects
-      </h2>
-      <div style="clear:both;"></div>
-
-        <div id="projects-container" class="projects-container">
-          <div class="project-card">
-            <h3>EDI Enrollment Project</h3>
-            <ul>
-              <li>Created a system to successfully bill health insurance companies using electronic data interchange</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>Internal Operation Lead</h3>
-            <ul>
-              <li>As the Internal Operations Lead, I oversee the optimization of internal workflows, manage cross-functional teams, and drive efficiency to enhance organizational performance.</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>Multi Page Website</h3>
-            <ul>
-              <li>Created a styled multi-page website as a test project <a href="https://eliv4389.github.io/" target="_blank"> here</a></li>
-            </ul>
-          </div>
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div id="projects-container" class="projects-container">
+        <!-- EDI Enrollment Project for Athelas -->
+        <div class="project-card">
+            <h3>EDI Enrollment Project for Athelas</h3>
+            <p>At Athelas, I was instrumental in establishing an EDI (Electronic Data Interchange) system specifically tailored for healthcare providers. By ensuring seamless electronic claims and remittance processing, we made a breakthrough in efficiency, scaling revenues to millions of dollars.</p>
+        </div>
+        <!-- Internal Operation Lead at Sellscale -->
+        <div class="project-card">
+            <h3>Internal Operation Lead at Sellscale</h3>
+            <p>At Sellscale, an AI-driven cold outreach company, I took the helm as the Internal Operations Lead. Reporting directly to the CEO, my role was pivotal in optimizing operations, ensuring seamless cross-departmental collaboration, and contributing to the company's growth trajectory.</p>
+        </div>
+        <!-- React App Project -->
+        <div class="project-card">
+            <h3>React Budget App</h3>
+            <p>Developed a React-based budgeting app to assist users in tracking their expenses and savings. The application's intuitive interface and performance-centric design has been appreciated by numerous users. <a href="https://elividal.com/ejtos-react_budget_app/" target="_blank">View the app here</a>.</p>
+        </div>
     </div>
-    </section>
-    <div style="clear:both;"></div>
+</section>
 
-    <!-- Recommendations -->
-    <section id="recommendations">
-      <h2>Recommendations</h2>
-      <div style="clear:both;"></div>
-      <div class="all_recommendations" id="all_recommendations">
+<!-- Recommendations -->
+<section id="recommendations">
+    <h2>Recommendations</h2>
+    <div class="all_recommendations" id="all_recommendations">
         <div class="recommendation">
-          <span>&#8220;</span>
-         Eli is an extremely talented individual. He went from zero knowledge to being the knowledge specialist at our company for doing EDI & billing. I highly recommend Eli for his strong work ethic, honesty, and affable nature. I hope to work with him again in the future!
-          <span>&#8221;</span>
+            <span>&#8220;</span>
+            Eli is an extremely talented individual. He went from zero knowledge to being the knowledge specialist at our company for doing EDI & billing. I highly recommend Eli for his strong work ethic, honesty, and affable nature. I hope to work with him again in the future!
+            <span>&#8221;</span>
         </div>
         <div class="recommendation">
           <span>&#8220;</span>
@@ -164,35 +144,36 @@ you can view my linkedin profile <a href="https://www.linkedin.com/in/eli-vidal/
 
     </section>
 
-    <!-- Recommendation Form -->
-    <section id="contact">
-      <div class="flex_center">
+   <!-- Recommendation Form -->
+<section id="contact">
+    <div class="flex_center">
         <fieldset>
-          <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
-          <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
-          </div>
+            <legend class="introduction">Leave a Recommendation</legend>
+            <input type="text" placeholder="Name (Optional)"> <br/>
+            <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+            <div class="flex_center">
+                <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+            </div>
         </fieldset>
-      </div>
-    </section>
-
-    <div class="iconbutton">
-      <a href="#home">
-       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-      </a>
     </div>
+</section>
 
+<div class="iconbutton">
+    <a href="#home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </a>
+</div>
 
-    <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3>Thanks for leaving a recommendation</h3>
-      <button onclick="showPopup(false)">Ok</button>
-    </div>
-  <script src="script.js"></script>
+<div class="popup" id="popup" class="flex_center">
+    <img src="html_finalprojimages/checkmark--outline.svg"/>
+    <h3>Thanks for leaving a recommendation</h3>
+    <button onclick="hidePopup()">Close</button>
+</div>
 
-  </body>
+<!-- Scripts -->
+<script src="./script.js"></script>
+</body>
+
 </html>

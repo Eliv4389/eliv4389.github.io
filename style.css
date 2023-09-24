@@ -1,333 +1,375 @@
-body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: mistyrose;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.button-div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: no-wrap;
-}
 
-/* Navigation Bar */
+
+body, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
 #home {
-  background-color:  #7600bc;
-  padding-bottom: 1cm;
-  margin-left:-1cm;
-  margin-right:-1cm;
-  margin-top:-1cm;
-  padding-top: 2cm;
-  padding-bottom: 2cm;
-  height: 5mm;
- }
-
-.topmenu {
-  color: lightgray;
-  margin: 10px;
-  padding: 20px;
-  font-size: 20px;
-  text-decoration:none;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    max-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 5%;
 }
 
-.topmenu:hover {
-  color: white;
-  font-weight: bolder;
-  text-decoration: underline;
-}
-
-.topdiv {
-  float: right;
-  padding-right: 1cm;
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
 }
 
 .profile_name {
-  float: left;
-  padding-left: 2cm;
-  background-color: hotpink;
-  font-size: 30px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
 }
 
-.profile_name .contact_info {
-  font-size: 15px;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+.contact_info {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    color: white;
 }
 
 .contact_info img {
-  width:25px;
-  margin-right: 10px;
-  float:left;
+    height: 20px;
+    width: 20px;
+    margin-right: 0.5rem;
 }
 
-/* Titles */
-
-h2 {
-  text-align: justify;
-  font-size: 50px;
-  text-align: center;
-  float: left;
-  color: #7600bc;
-  margin: 30px;
-  margin-left: 60px;
-  margin-top: 40px;
-  margin-bottom: 0px;
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #333;
 }
 
-.introduction {
-  text-align: justify;
-  font-size: 30px;
-  text-align: center;
-  float: left;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  animation-duration: 5s;
-  position: relative;
+.menu_item {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 15px;
 }
 
-/* Used in the About Me sections */
-
-.container {
-  display: flex;
+.menu_item:hover {
+    background-color: #555;
 }
 
-/* About Me */
-
-.about-me {
-  display: flex;
-  align-items: center;
+#about-me {
+    margin-top: 300px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 40px 5%;
+    background-color: #f9f9f9; 
+    border-radius: 10px;
 }
 
-#about-me h1 {
-  font-size: 65px;
-  margin-top: 90px;
-  color: #7600bc;
+#about-me .profile_image {
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 30px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+#about-me div {
+    flex: 1;
+    max-width: 60%;
+}
+
+#about-me h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 #about-me p {
-  font-size: 25px;
-  color: rgb(128, 128, 128);
-  margin-top: -1cm;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
 }
 
-.profile_image {
-  width: 300px;
-  height: fit-content;
-  vertical-align: middle;
-  margin: 5px;
+#about-me p a {
+    color: #0073e6;
+    text-decoration: none;
+    border-bottom: 1px dotted #0073e6;
+    padding-bottom: 2px;
 }
 
-/* Skills */
+#about-me p a:hover {
+    color: #005bb5;
+}
+
+
+/* Skills Section */
+#skills {
+    padding: 60px 5%;
+    background-color: #fff;
+    position: relative;
+    z-index: 2; /* Ensures it appears above the other fixed sections */
+}
+
+#skills h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: center;
+}
 
 .all_skills {
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
 .skill {
-  border: 1px solid gray;
-  display: block;
-  border-radius: 6px;
-  text-align: center;
-  margin: 50px;
-  padding: 10px;
-  width: 2in;
-  font-size: 20px;
-  box-shadow: 0 3px 10px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skill img {
-  height: 35px;
-  align-items: center;
+    width: 80px;
+    height: 80px; /* You can adjust this depending on the actual size of your icons */
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
 }
 
-.skills h6 {
-  align-items: center;
-  font-size: 20px;
-  margin-block-start: 8px;
-  margin-block-end: 5px;
-  font-weight: bold;
-} 
-
-.skills p {
-  align-items: center;
-  font-size: 15px;
-  color: gray;
-  margin-block-start: 5px;
-  margin-block-end: 5px;
-} 
-
-.flex_center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.skill h6 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-/* Projects */
+.skill p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 60px 5%;
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: 3;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: center;
+}
 
 .projects-container {
-  margin-top: 30px;
-  margin-left: 60px;
-}
-
-.projects-container hr {
-  border: 1px solid lightgray;
-  width: 75%;
-  margin-left: 5cm;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
 }
 
 .project-card {
-  margin: 0 15px 15px 30px;
-  padding-bottom: 5px;
+    flex-basis: calc(33.33% - 20px); /* Width of each card with a slight deduction for gap */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
-  font-size: 25px;
-  margin-left: 30px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-.project-card li {
-  font-size: 20px;
-  margin-left: 30px;
+.project-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
 }
 
-/* Recommendations */
+.project-card a {
+    color: #0073e6;
+    text-decoration: none;
+    border-bottom: 1px dotted #0073e6;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #005bb5;
+}
+
+/* Recommendations Styles */
+#recommendations {
+    padding: 40px 5%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+#recommendations h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center; /* Centering the header */
+}
 
 .all_recommendations {
-  display: flex;
-  align-items: center;
-  margin-left: 1in;
-  flex-direction: row;
-  flex-flow: wrap;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows the recommendation divs to stack on smaller screens */
+    justify-content: space-between; 
+    gap: 20px; /* Provides space between the cards */
 }
 
 .recommendation {
-  font-family: fantasy;
-  font-style: italic;
-  text-align: left;
-  width: 27.875rem;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px;
-  margin: 10px;
-  border:1px solid gray;
-  font-size: 18px;
-  height:230px
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
+    flex: 1; /* Makes all cards equal width */
+    max-width: calc(33.333% - 20px); /* Each card will take up approximately one third of the container width minus the gap */
+    position: relative;
+    overflow: hidden; /* Makes sure content stays within the box */
 }
 
 .recommendation span {
-  color: #7600bc;
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #0073e6;
 }
 
-/* Scroll to Top Button */
-
-.iconbutton{
-  width: 48px;
-  height: 48px;
-  border-radius: 100%;
-  background-color: #7600bc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  right: 3%;
-  bottom: 3%;
-  cursor: pointer;
+/* Adjusting the first and last span (the quotation marks) */
+.recommendation span:first-of-type {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
-/* Form Pop-up */
-
-.popup {
-  width:400px;
-  background-color: #e8bcf0;
-  border-radius: 3mm;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-  position: fixed;
-  /* padding: 30px; */
-  visibility: hidden;
+.recommendation span:last-of-type {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
-.popup img {
-  padding-top: 20px;
+/* Recommendation Form Styles */
+#contact {
+    background-color: #f4f4f4;
+    padding: 40px 5%;
+    border-radius: 10px;
+    margin: 40px 0;
 }
 
-.popup button {
-  background-color: #fff;
-  border: 1px solid #7600bc;
-  color: #7600bc;
-  display: block;
-  border-radius: 6px;
-  text-align: center;
-  margin: 50px;
-  padding: 10px;
-  width: 2in;
-  font-size: 20px;
-  margin-left: 25%;
-}
-
-.popup button:hover {
-  background-color: #fff;
-  border: 2px solid #7600bc;
-  color: #7600bc;
-  display: block;
-  font-weight: bolder;
-  text-align: center;
-  cursor: pointer;
-  margin-left: 25%;
-}
-
-/* Recommendation Form */
-
-input, textarea {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-  margin: 10px;  
-  width:100%;
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
 }
 
 fieldset {
-  display: flexbox;
-  align-content: center;
-  justify-content: center;  
-  padding: 25px; 
-  margin-left: 50px; 
-  margin-right: 50px;   
-  border: thin solid white;
-  width: 50%;
+    width: 80%;
+    max-width: 600px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
 }
 
-/* Buttons */
+.introduction {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+}
 
 button {
-  background-color: #fff;
-  border: 1px solid #7600bc;
-  color: #7600bc;
-  display: block;
-  border-radius: 6px;
-  text-align: center;
-  margin: 50px;
-  padding: 10px;
-  width: 2in;
-  font-size: 20px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-  background-color: #7600bc;
-  border: 1px solid #7600bc;
-  color: #fff;
-  display: block;
-  border-radius: 6px;
-  text-align: center;
-  cursor: pointer;
+    background-color: #005bb5;
 }
+
+/* Icon Button Styles */
+.iconbutton {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    background-color: #0073e6;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.iconbutton a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 2000; /* Ensure it's above everything else */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.popup img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.popup h3 {
+    margin-bottom: 20px;
+}
+

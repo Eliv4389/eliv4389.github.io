@@ -1,34 +1,38 @@
 function showSmileyAndNavigate(url) {
-  const container = document.getElementById("smileyContainer");
-  container.innerHTML = "😊"; // Unicode for the smiley emoji
-  
-  // Navigate to the URL after a short delay to allow time for the smiley to show
-  setTimeout(function() {
-    window.location.href = url;
-  }, 1000); // 1000 milliseconds = 1 second
+    const smiley = document.createElement('img');
+    smiley.src = "html_finalprojimages/smiley.png";
+    smiley.width = 100;
+    const container = document.getElementById('smileyContainer');
+    container.appendChild(smiley);
+
+    setTimeout(() => {
+        window.location.href = url;
+    }, 3000);
 }
 
 function addRecommendation() {
-  let recommendation = document.getElementById("new_recommendation");
-  if (recommendation.value != null && recommendation.value.trim() != "") {
-    console.log("New recommendation added");
+    const textarea = document.getElementById('new_recommendation');
+    const recommendationsContainer = document.getElementById('all_recommendations');
+    const newRecommendation = document.createElement('div');
+    newRecommendation.classList.add('recommendation');
 
-    // Call showPopup here
-    showPopup(true);
+    newRecommendation.innerHTML = `
+        <span>&#8220;</span>
+        ${textarea.value}
+        <span>&#8221;</span>
+    `;
 
-    var element = document.createElement("div");
-    element.setAttribute("class", "recommendation");
-    element.innerHTML = '<span>&#8220;</span>' + recommendation.value + '<span>&#8221;</span>';
-    document.getElementById("all_recommendations").appendChild(element);
-
-    recommendation.value = "";
-  }
+    recommendationsContainer.appendChild(newRecommendation);
+    textarea.value = '';
+    showPopup();
 }
 
-function showPopup(bool) {
-  if (bool) {
-    document.getElementById('popup').style.visibility = 'visible'
-  } else {
-    document.getElementById('popup').style.visibility = 'hidden'
-  }
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'flex';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
 }
