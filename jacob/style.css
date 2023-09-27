@@ -6,31 +6,30 @@ body {
     padding: 20px;
 }
 
-/* Adding a semi-transparent white background to the main content */
 .content-wrapper {
-    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
-    border-radius: 10px; /* Optional, but adds a touch */
+    border-radius: 10px;
 }
 
 h1, h2 {
     color: #2e2519;
     border-bottom: 2px solid #5a442a;
     padding-bottom: 10px;
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.7); /* Added a light text shadow */
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.7);
 }
 
 p, ul {
     font-size: 1.2em;
     line-height: 1.6;
     color: #2e2519;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Added a light text shadow */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .flag-container {
-    display: flex;            /* Change to flexbox */
-    flex-wrap: wrap;          /* Allow wrapping */
-    justify-content: center;  /* Center the flags */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -42,42 +41,83 @@ p, ul {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
-
-     /* Increased default dimensions for flag box */
-    width: 200px;     /* Adjusted width */
-    height: 130px;    /* Adjusted height */
+    width: 200px;
+    height: 130px;
 }
 
 .flag-box img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Preserve aspect ratio */
+    object-fit: contain;
     transition: transform 0.3s ease-in-out;
 }
 
-/* On hover, show the flag in its original size */
 .flag-box:hover {
-    position: fixed; /* Taking out of flow */
-    top: 50%;        /* Center vertically */
-    left: 50%;       /* Center horizontally */
-    transform: translate(-50%, -50%); /* Further centering adjustments */
-    z-index: 1000;   /* Ensure it is on top */
-
-    /* Adjusted dimensions for hover */
-    width: 60%;      /* 60% of the viewport width, adjust as necessary */
-    height: 60%;     /* 60% of the viewport height, adjust as necessary */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 60%;
+    height: 60%;
 }
 
 .flag-box:hover img {
-    width: 100%;     /* Ensure the image covers the box fully */
+    width: 100%;
     height: 100%;
-    object-fit: contain; /* Preserve aspect ratio */
+    object-fit: contain;
 }
 
 .flag-section {
     background: url('background.jpeg') no-repeat center center; 
     background-size: cover;
     padding: 20px;
-    border-radius: 10px; /* Optional, adds a rounded corner effect */
-    margin: 20px 0;      /* Adding some space between the main content and this section */
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Mobile Responsiveness */
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .flag-box {
+        width: 150px;     /* Reduce flag-box size for smaller devices */
+        height: 100px;
+    }
+
+    /* Reduce hover dimensions for mobile devices */
+    .flag-box:hover {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjust text size for readability */
+    }
+
+    p, ul {
+        font-size: 1em;
+    }
+
+    .flag-box {
+        width: 120px;     /* Further reduce flag-box size for very small devices */
+        height: 80px;
+    }
+
+    /* Further reduce hover dimensions for very small devices */
+    .flag-box:hover {
+        width: 90%;
+        height: 90%;
+    }
 }
