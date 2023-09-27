@@ -1,46 +1,83 @@
 body {
     font-family: "Georgia", serif;
-    background: #f4f1e8 url
+    background: #f4f1e8 url('background2.png') no-repeat center center fixed;
     background-size: cover;
     margin: 20px;
     padding: 20px;
 }
 
+/* Adding a semi-transparent white background to the main content */
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+    padding: 20px;
+    border-radius: 10px; /* Optional, but adds a touch */
+}
+
 h1, h2 {
-    color: #5a442a;
+    color: #2e2519;
     border-bottom: 2px solid #5a442a;
     padding-bottom: 10px;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.7); /* Added a light text shadow */
 }
 
 p, ul {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #3d3d3d;
+    color: #2e2519;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Added a light text shadow */
 }
 
 .flag-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;            /* Change to flexbox */
+    flex-wrap: wrap;          /* Allow wrapping */
+    justify-content: center;  /* Center the flags */
     gap: 20px;
-    max-width: 1000px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .flag-box {
     border: 1px solid #5a442a;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
+
+     /* Increased default dimensions for flag box */
+    width: 200px;     /* Adjusted width */
+    height: 130px;    /* Adjusted height */
 }
 
 .flag-box img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Preserve aspect ratio */
     transition: transform 0.3s ease-in-out;
 }
 
+/* On hover, show the flag in its original size */
+.flag-box:hover {
+    position: fixed; /* Taking out of flow */
+    top: 50%;        /* Center vertically */
+    left: 50%;       /* Center horizontally */
+    transform: translate(-50%, -50%); /* Further centering adjustments */
+    z-index: 1000;   /* Ensure it is on top */
+
+    /* Adjusted dimensions for hover */
+    width: 60%;      /* 60% of the viewport width, adjust as necessary */
+    height: 60%;     /* 60% of the viewport height, adjust as necessary */
+}
+
 .flag-box:hover img {
-    transform: scale(1.1);
+    width: 100%;     /* Ensure the image covers the box fully */
+    height: 100%;
+    object-fit: contain; /* Preserve aspect ratio */
+}
+
+.flag-section {
+    background: url('background.jpeg') no-repeat center center; 
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px; /* Optional, adds a rounded corner effect */
+    margin: 20px 0;      /* Adding some space between the main content and this section */
 }
