@@ -1,14 +1,4 @@
-function showSmileyAndNavigate(url) {
-    const smiley = document.createElement('img');
-    smiley.src = "html_finalprojimages/smiley.png";
-    smiley.width = 100;
-    const container = document.getElementById('smileyContainer');
-    container.appendChild(smiley);
 
-    setTimeout(() => {
-        window.location.href = url;
-    }, 3000);
-}
 
 document.getElementById('backToTopButton').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default behavior (in case it's causing issues)

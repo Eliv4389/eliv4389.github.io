@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+     overflow-x: hidden; 
+}
+
+#left-color {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%; 
+    background-color: #FAD02E; /* Feel free to change the color */
+    z-index: -1;
+}
+
+#right-color {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background-color: #33334D; /* Feel free to change the color */
+    color: white; /* Ensuring text on the right side is visible */
+    z-index: -1;
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+        position: relative;
+    z-index: 1;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#hero {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Fun Button Styles */
+button {
+    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    height: 48px;
+    padding: 0 30px;
+    box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #FF8E53 30%, #FE6B8B 90%);
+    transform: scale(1.05);
+}
